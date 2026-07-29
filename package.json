@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "keywords": [],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "source": "./admin/src/index.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "test:ts:front": "tsc -p admin/tsconfig.json",
+    "test:ts:back": "tsc -p server/tsconfig.json"
+  },
+  "dependencies": {
+    "typesense": "^1.8.2"
+  },
+  "devDependencies": {
+    "@strapi/strapi": "^5.51.1",
+    "@strapi/sdk-plugin": "^6.1.1",
+    "prettier": "^3.9.6",
+    "@strapi/design-system": "^2.2.3",
+    "@strapi/icons": "^2.2.3",
+    "react-intl": "^6.8.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4",
+    "styled-components": "^6.4.4",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@strapi/typescript-utils": "^5.51.1",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^5.51.1",
+    "@strapi/sdk-plugin": "^6.1.1",
+    "@strapi/design-system": "^2.2.3",
+    "@strapi/icons": "^2.2.3",
+    "react-intl": "^6.8.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4",
+    "styled-components": "^6.4.4"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "typesense",
+    "displayName": "Typesense Search & AI Retrieval",
+    "description": "Typesense full-text, vector, and hybrid search integration for Strapi 5"
+  },
+  "name": "@juadariasmar/strapi-plugin-typesense",
+  "description": "Typesense full-text, vector, and hybrid search integration for Strapi 5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/juadariasmar/strapi-plugin-typesense.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juadariasmar/strapi-plugin-typesense/issues"
+  },
+  "homepage": "https://github.com/juadariasmar/strapi-plugin-typesense#readme",
+  "author": "Juan David Arias <juadariasmar@gmail.com>"
+}
