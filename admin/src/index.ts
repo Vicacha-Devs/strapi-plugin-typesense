@@ -14,7 +14,11 @@ const plugin: StrapiApp["appPlugins"][string] = {
         id: `${PLUGIN_ID}.plugin.name`,
         defaultMessage: PLUGIN_ID,
       },
-      Component: () => import("./pages/App"),
+      Component: async () => {
+        const { default: App } = await import("./pages/App");
+
+        return App;
+      },
       permissions: [],
     });
 

@@ -1,0 +1,16 @@
+{
+  "plugin.name": "Typesense",
+  "home.title": "Typesense Arama ve Yapay Zeka Erişimi",
+  "home.subtitle": "Strapi 5 için birleşik tam metin, vektör ve hibrit arama",
+  "connection.title": "Typesense Sunucu Bağlantısı",
+  "connection.status": "Durum:",
+  "connection.checking": "Kontrol ediliyor...",
+  "connection.healthy": "Bağlı ve sağlıklı",
+  "connection.unhealthy": "Bağlantı kesildi / İşlem gerekli",
+  "vector.title": "Vektör ve Hibrit Arama",
+  "vector.description": "Typesense, otomatik gömme modeli desteğiyle (ts/all-MiniLM-L6-v2) yerel vektör araması sunar.",
+  "vector.configure": "Vektör Alanlarını Yapılandır",
+  "indexing.title": "İçerik Türü Dizinleme",
+  "indexing.description": "Girdi oluşturma, güncelleme ve silme yaşam döngülerinde otomatik gerçek zamanlı senkronizasyon.",
+  "indexing.reindex": "Tüm Koleksiyonları Yeniden Dizinle"
+}

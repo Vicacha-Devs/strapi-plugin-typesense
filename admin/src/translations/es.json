@@ -1,0 +1,16 @@
+{
+  "plugin.name": "Typesense",
+  "home.title": "Búsqueda Typesense y Recuperación con IA",
+  "home.subtitle": "Búsqueda unificada de texto completo, vectorial e híbrida para Strapi 5",
+  "connection.title": "Conexión con el servidor Typesense",
+  "connection.status": "Estado:",
+  "connection.checking": "Comprobando...",
+  "connection.healthy": "Conectado y en buen estado",
+  "connection.unhealthy": "Desconectado / Se requiere acción",
+  "vector.title": "Búsqueda vectorial e híbrida",
+  "vector.description": "Typesense incluye búsqueda vectorial nativa con soporte de modelos de embeddings automáticos (ts/all-MiniLM-L6-v2).",
+  "vector.configure": "Configurar campos vectoriales",
+  "indexing.title": "Indexación de tipos de contenido",
+  "indexing.description": "Sincronización automática en tiempo real al crear, actualizar y eliminar entradas.",
+  "indexing.reindex": "Reindexar todas las colecciones"
+}

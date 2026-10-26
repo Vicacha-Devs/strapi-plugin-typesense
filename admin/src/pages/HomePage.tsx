@@ -12,8 +12,14 @@ import {
   CardBody,
   Divider,
 } from "@strapi/design-system";
+import { useIntl } from "react-intl";
+
+import { getTranslation } from "../utils/getTranslation";
 
 const HomePage = () => {
+  const { formatMessage } = useIntl();
+  const t = (id: string, defaultMessage: string) =>
+    formatMessage({ id: getTranslation(id), defaultMessage });
   const [health, setHealth] = useState<boolean | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -34,10 +40,10 @@ const HomePage = () => {
     <Main padding={8}>
       <Box paddingBottom={6}>
         <Typography variant="alpha">
-          Typesense Search & AI Retrieval
+          {t("home.title", "Typesense Search & AI Retrieval")}
         </Typography>
         <Typography variant="epsilon" textColor="neutral600">
-          Unified Full-Text, Vector, and Hybrid Search for Strapi 5
+          {t("home.subtitle", "Unified Full-Text, Vector, and Hybrid Search for Strapi 5")}
         </Typography>
       </Box>
 
@@ -45,22 +51,22 @@ const HomePage = () => {
         <Card>
           <CardHeader padding={4}>
             <Typography variant="delta" fontWeight="bold">
-              Typesense Server Connection
+              {t("connection.title", "Typesense Server Connection")}
             </Typography>
           </CardHeader>
           <Divider />
           <CardBody padding={4}>
             <Flex gap={3} alignItems="center">
-              <Typography variant="omega">Status:</Typography>
+              <Typography variant="omega">{t("connection.status", "Status:")}</Typography>
               {loading ? (
-                <Badge active variant="neutral">Checking...</Badge>
+                <Badge active variant="neutral">{t("connection.checking", "Checking...")}</Badge>
               ) : health ? (
                 <Badge active variant="success">
-                  Connected & Healthy
+                  {t("connection.healthy", "Connected & Healthy")}
                 </Badge>
               ) : (
                 <Badge active variant="danger">
-                  Disconnected / Action Required
+                  {t("connection.unhealthy", "Disconnected / Action Required")}
                 </Badge>
               )}
             </Flex>
@@ -73,16 +79,16 @@ const HomePage = () => {
           <Card>
             <CardHeader padding={4}>
               <Typography variant="delta" fontWeight="bold">
-                Vector & Hybrid Search
+                {t("vector.title", "Vector & Hybrid Search")}
               </Typography>
             </CardHeader>
             <Divider />
             <CardBody padding={4}>
               <Typography variant="omega">
-                Typesense includes native vector search with auto-embeddings model support (`ts/all-MiniLM-L6-v2`).
+                {t("vector.description", "Typesense includes native vector search with auto-embeddings model support (ts/all-MiniLM-L6-v2).")}
               </Typography>
               <Box paddingTop={4}>
-                <Button variant="secondary">Configure Vector Fields</Button>
+                <Button variant="secondary">{t("vector.configure", "Configure Vector Fields")}</Button>
               </Box>
             </CardBody>
           </Card>
@@ -92,16 +98,16 @@ const HomePage = () => {
           <Card>
             <CardHeader padding={4}>
               <Typography variant="delta" fontWeight="bold">
-                Content-Type Indexing
+                {t("indexing.title", "Content-Type Indexing")}
               </Typography>
             </CardHeader>
             <Divider />
             <CardBody padding={4}>
               <Typography variant="omega">
-                Automatic real-time synchronization on entry creation, update, and deletion lifecycles.
+                {t("indexing.description", "Automatic real-time synchronization on entry creation, update, and deletion lifecycles.")}
               </Typography>
               <Box paddingTop={4}>
-                <Button variant="default">Re-index All Collections</Button>
+                <Button variant="default">{t("indexing.reindex", "Re-index All Collections")}</Button>
               </Box>
             </CardBody>
           </Card>

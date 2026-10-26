@@ -1,0 +1,16 @@
+{
+  "plugin.name": "Typesense",
+  "home.title": "بحث Typesense والاسترجاع بالذكاء الاصطناعي",
+  "home.subtitle": "بحث موحد بالنص الكامل والمتجهات والبحث الهجين لـ Strapi 5",
+  "connection.title": "الاتصال بخادم Typesense",
+  "connection.status": "الحالة:",
+  "connection.checking": "جارٍ التحقق...",
+  "connection.healthy": "متصل وسليم",
+  "connection.unhealthy": "غير متصل / يلزم اتخاذ إجراء",
+  "vector.title": "البحث بالمتجهات والبحث الهجين",
+  "vector.description": "يتضمن Typesense بحثًا أصليًا بالمتجهات مع دعم نموذج التضمين التلقائي (ts/all-MiniLM-L6-v2).",
+  "vector.configure": "إعداد حقول المتجهات",
+  "indexing.title": "فهرسة أنواع المحتوى",
+  "indexing.description": "مزامنة تلقائية فورية عند إنشاء المدخلات وتحديثها وحذفها.",
+  "indexing.reindex": "إعادة فهرسة جميع المجموعات"
+}
